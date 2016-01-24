@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+	
+		<title>Angular Material - Dota App</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<style type="text/css">
+			/**
+			* Hide when Angular is not yet loaded and initialized
+			*/
+			[ng-cloak] {
+				display: none;
+			}
+		</style>
+	</head>
+	<body ng-cloak flex>
+        <md-content layout="row" layout-padding ui-view>
+            Home Page
+        </md-content>
+        
+	<script src="jspm_packages/system.js"></script>
+	<script src="public/config.js"></script>
+	<script>
+		System
+            .import('app/boot')
+            .catch( console.error.bind(console) ); // make sure any errors print to console
+	</script>
+	</body>
+</html>
