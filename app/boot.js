@@ -6,7 +6,7 @@ import 'angular-ui-router'
 
 // Load loggers for injection and pre-angular debugging
 
-import { LogDecorator, ExternalLogger } from 'app/utils/LogDecorator';
+import { LogDecorator, ExternalLogger } from 'app/utils/logDecorator';
 
 /**
  * Manually bootstrap the application when AngularJS and
