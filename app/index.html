@@ -8,6 +8,7 @@
 	
 		<title>Angular Material - Dota App</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel='stylesheet' href='/stylesheets/style.css'>
 		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<style type="text/css">
@@ -19,11 +20,23 @@
 			}
 		</style>
 	</head>
-	<body ng-cloak flex>
-        <md-content layout="row" layout-padding ui-view>
-            Home Page
-        </md-content>
-        
+	<body ng-cloak flex style="background-color: #CFD8DC">
+        <div ui-view layout-fill>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Settings">
+                        <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+                    </md-button>
+                    <h2>
+                        <span>Toolbar with Icon Buttons</span>
+                    </h2>
+                    <span flex></span>
+                    <md-button class="md-fab md-fab-big md-primary md-hue-2" aria-label="Login" ui-sref="login">
+                        <md-icon aria-label="Login" class="material-icons">account_circle</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+        </div>  
 	<script src="jspm_packages/system.js"></script>
 	<script src="public/config.js"></script>
 	<script>

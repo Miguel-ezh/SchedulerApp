@@ -6,3 +6,58 @@ body {
 a {
   color: #00B7FF;
 }
+
+.md-fab-big md-icon {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+.login-top-background{
+    background-color: rgb(33,150,243);
+    width: 100%;
+    height: 33%;
+    position: absolute;
+}
+
+#login-form .logo {
+    width: 115px;
+    height: 115px;
+    line-height: 110px;
+    font-size: 86px;
+    font-weight: 500;
+    margin: 32px auto 0px auto;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+#login-form .md-accent-bg {
+    background-color: rgb(3,155,229);
+    color: rgba(255,255,255,1);
+    
+}
+
+#login-form .md-accent-bg span {
+    margin-left: 35px;
+}
+
+#login-form h3{
+    margin-top: 0px;
+}
+
+.md-buttom-large {
+    width: 200px;
+}
+
+#login-forgot {
+    font-size: 13px;
+}
+
+#login-forgot a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#login-forgot a:hover {
+    text-decoration: underline;
+}

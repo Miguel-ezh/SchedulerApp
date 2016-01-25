@@ -5,8 +5,10 @@ import material from 'angular-material'
 import 'angular-ui-router'
 
 // Load loggers for injection and pre-angular debugging
-
 import { LogDecorator, ExternalLogger } from 'app/utils/logDecorator';
+
+//Load modules
+import '/app/login/load'
 
 /**
  * Manually bootstrap the application when AngularJS and
@@ -25,6 +27,7 @@ angular
     let body = document.getElementsByTagName("body")[0];
     let app  = angular
           .module( appName, [ 
+            'schedulerApp.login',
             'ui.router',
             material
             ])
@@ -45,6 +48,11 @@ angular
                     function($provide, $stateProvider, $urlRouterProvider, $mdThemingProvider){
                 $urlRouterProvider.otherwise('/app');
                 LogDecorator($provide);
+                
+                $mdThemingProvider.theme('default')
+                    .primaryPalette('blue')
+                    .accentPalette('light-blue')
+                    .warnPalette('red');
           }]);
           
     angular.bootstrap( body, [ app.name ], { strictDi: false })
