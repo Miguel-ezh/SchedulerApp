@@ -8,4 +8,12 @@ export default angular
                     controllerAs: 'vm',
                     templateUrl: '/app/login/login.html'
                 });
+                
+            $stateProvider
+                .state('forgot', {
+                   url: '/forgot',
+                   controller: 'ForgotController',
+                   controllerAs: 'vm',
+                   templateUrl: '/app/login/forgot.html' 
+                });
         }]);

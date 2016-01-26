@@ -12,31 +12,15 @@
             </h3>
             <form name="projectForm" novalidate>
                 <md-input-container class="md-block">
-                    <label>Username</label>
+                    <label>Email</label>
                     <input name="username" ng-model="vm.username">
                     <!--<div ng-messages="vm.username.$error">
                         <div ng-message="required">This is required.</div>
                     </div>-->
                 </md-input-container>
-                <md-input-container class="md-block">
-                    <label>Password</label>
-                    <input name="password" ng-model="vm.password">
-                    <!--<div ng-messages="vm.password.$error">
-                        <div ng-message="required">This is required.</div>
-                    </div>-->
-                </md-input-container>
-                <div layout="row" id="login-forgot">
-                    <md-checkbox aria-label="Remember me">
-                        Remember me
-                    </md-checkbox>
-                    <span flex></span>
-                    <a href="#" ui-sref="forgot">
-                        Forgot Password?
-                    </a>
-                </div>
                 <div layout="row" layout-align="center center">
                     <md-button class="md-raised md-primary md-buttom-large" aria-label="LOG IN">
-                        LOG IN
+                        RECOVER PASSWORD
                     </md-button>
                 </div>
             </form>
