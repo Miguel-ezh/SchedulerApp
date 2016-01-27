@@ -57,7 +57,7 @@ angular
           ])
           .config( ['$provide', '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', 'jwtInterceptorProvider', '$httpProvider',  
                     function($provide, $stateProvider, $urlRouterProvider, $mdThemingProvider, jwtInterceptorProvider, $httpProvider){
-                $urlRouterProvider.otherwise('/app');
+                $urlRouterProvider.otherwise('/');
                 
                 jwtInterceptorProvider.tokenGetter = function(store) {
                     return store.get('jwt');
