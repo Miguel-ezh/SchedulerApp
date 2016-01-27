@@ -15,7 +15,9 @@ System.config({
 
   map: {
     "angular": "github:angular/bower-angular@1.4.9",
+    "angular-jwt": "npm:angular-jwt@0.0.9",
     "angular-material": "github:angular/bower-material@1.0.3",
+    "angular-storage": "npm:angular-storage@0.0.13",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
@@ -47,6 +49,10 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "npm:angular-storage@0.0.13": {
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"

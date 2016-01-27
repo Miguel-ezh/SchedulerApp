@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/dota-app');
+mongoose.connect('mongodb://localhost/s-app');
 
 var app = express();
 app.set('secret', 'ajfh4h982n53hcr3orm324roxmr2n473gr683t5b46c32isuybrumbfm328f47y*y4fb43u2yg4');

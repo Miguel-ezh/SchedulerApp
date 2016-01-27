@@ -6,9 +6,12 @@ import 'angular-ui-router'
 
 // Load loggers for injection and pre-angular debugging
 import { LogDecorator, ExternalLogger } from 'app/utils/logDecorator';
+import 'angular-storage';
+import 'angular-jwt';
 
 //Load modules
 import '/app/login/load'
+import '/app/home/load'
 
 /**
  * Manually bootstrap the application when AngularJS and
@@ -28,26 +31,38 @@ angular
     let app  = angular
           .module( appName, [ 
             'schedulerApp.login',
+            'schedulerApp.home',
             'ui.router',
-            material
+            material,
+            'angular-jwt',
+            'angular-storage'
             ])
           .run(
           [
-              '$rootScope', '$state', '$stateParams',
-            function ($rootScope, $state, $stateParams) {
-                // It's very handy to add references to $state and $stateParams to the $rootScope
-                // so that you can access them from any scope within your applications.For example,
-                // <li ng-class="{ active: $state.includes('contacts.list') }"> will set the <li>
-                // to active whenever 'contacts.list' or one of its decendents is active.
+              '$rootScope', '$state', '$stateParams', 'store', 'jwtHelper', 
+            function ($rootScope, $state, $stateParams, store, jwtHelper) {
                 $rootScope.$state = $state;
                 $rootScope.$stateParams = $stateParams;
                 $rootScope.$on("$stateChangeError", console.log.bind(console));
+                
+                $rootScope.$on('$stateChangeStart', function(e, to) {
+                    if (to.data && to.data.requiresLogin) {
+                        if (!store.get('jwt') || jwtHelper.isTokenExpired(store.get('jwt'))) {
+                            e.preventDefault();
+                            $state.go('login');
+                        }
+                    }
+                });
             }
           ])
-          .config( ['$provide', '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', 
-                    function($provide, $stateProvider, $urlRouterProvider, $mdThemingProvider){
+          .config( ['$provide', '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', 'jwtInterceptorProvider', '$httpProvider',  
+                    function($provide, $stateProvider, $urlRouterProvider, $mdThemingProvider, jwtInterceptorProvider, $httpProvider){
                 $urlRouterProvider.otherwise('/app');
-                LogDecorator($provide);
+                
+                jwtInterceptorProvider.tokenGetter = function(store) {
+                    return store.get('jwt');
+                }
+                $httpProvider.interceptors.push('jwtInterceptor');
                 
                 $mdThemingProvider.theme('default')
                     .primaryPalette('blue')
