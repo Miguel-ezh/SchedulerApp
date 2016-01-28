@@ -3,6 +3,7 @@ import 'angular-material/angular-material.css!'
 import angular from 'angular'
 import material from 'angular-material'
 import 'angular-ui-router'
+import 'angular-messages'
 
 // Load loggers for injection and pre-angular debugging
 import { LogDecorator, ExternalLogger } from 'app/utils/logDecorator';
@@ -34,6 +35,7 @@ angular
             'schedulerApp.home',
             'ui.router',
             material,
+            'ngMessages',
             'angular-jwt',
             'angular-storage'
             ])

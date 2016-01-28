@@ -20,13 +20,25 @@ a {
     position: absolute;
 }
 
-#login-form .logo {
+.logo-login {
     width: 115px;
     height: 115px;
     line-height: 110px;
     font-size: 86px;
     font-weight: 500;
     margin: 32px auto 0px auto;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+.logo-forgot,
+.logo-signup {
+    width: 115px;
+    height: 115px;
+    line-height: 110px;
+    font-size: 86px;
+    font-weight: 500;
+    margin: 0px auto 0px auto;
     color: #FFF;
     border-radius: 2px;
 }
@@ -45,21 +57,21 @@ a {
     margin-top: 0px;
 }
 
-.md-buttom-large {
-    width: 200px;
-}
-
-#login-forgot {
+#login-form {
     font-size: 13px;
 }
 
-#login-forgot a {
+#login-form a {
     text-decoration: none;
     font-weight: 700;
 }
 
-#login-forgot a:hover {
+#login-form a:hover {
     text-decoration: underline;
+}
+
+.md-buttom-large {
+    width: 200px;
 }
 
 /* Have to set height explicity on ui-view 

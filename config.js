@@ -17,6 +17,7 @@ System.config({
     "angular": "github:angular/bower-angular@1.4.9",
     "angular-jwt": "npm:angular-jwt@0.0.9",
     "angular-material": "github:angular/bower-material@1.0.3",
+    "angular-messages": "github:angular/bower-angular-messages@1.4.9",
     "angular-storage": "npm:angular-storage@0.0.13",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "babel": "npm:babel-core@5.8.35",

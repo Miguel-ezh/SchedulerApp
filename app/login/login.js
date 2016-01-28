@@ -16,4 +16,12 @@ export default angular
                    controllerAs: 'vm',
                    templateUrl: '/app/login/forgot.html' 
                 });
+            
+            $stateProvider
+                .state('signup', {
+                   url: '/signup',
+                   controller: 'SignupController',
+                   controllerAs: 'vm',
+                   templateUrl: '/app/login/signup.html' 
+                });
         }]);
