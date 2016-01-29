@@ -2,11 +2,14 @@ export default angular
         .module('schedulerApp.login')
         .controller('LoginController', LoginController);
 
-LoginController.$inject = [];
+LoginController.$inject = ['toastService'];
 
-function LoginController() {
+function LoginController(toastService) {
     let vm = this;
     vm.username = '';
     vm.password = '';
     
+    vm.test = function(){
+        toastService.info('test alert');
+    }
 }

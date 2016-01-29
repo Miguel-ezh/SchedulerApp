@@ -11,6 +11,7 @@ import 'angular-storage';
 import 'angular-jwt';
 
 //Load modules
+import '/app/common/load'
 import '/app/login/load'
 import '/app/home/load'
 
@@ -33,6 +34,7 @@ angular
           .module( appName, [ 
             'schedulerApp.login',
             'schedulerApp.home',
+            'schedulerApp.common',
             'ui.router',
             material,
             'ngMessages',

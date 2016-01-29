@@ -1,5 +1,5 @@
 export default angular
-    .module('schedulerApp.login', ['ui.router'])
+    .module('schedulerApp.login', ['ui.router', 'schedulerApp.common'])
         .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             $stateProvider
                 .state('login', {
