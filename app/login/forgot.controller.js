@@ -2,9 +2,13 @@ export default angular
         .module('schedulerApp.login')
         .controller('ForgotController', ForgotController);
 
-ForgotController.$inject = [];
+ForgotController.$inject = ['$window'];
 
-function ForgotController() {
+function ForgotController($window) {
     let vm = this;
+    vm.email = '';
     
+    vm.back = function(){
+        $window.history.back();
+    }
 }

@@ -13,25 +13,25 @@
             <h3 class="md-subhead" style="text-align: center;">
                 Create your account
             </h3>
-            <form name="projectForm" novalidate>
+            <form name="signupForm" novalidate>
                 <md-input-container class="md-block">
                     <label>First Name</label>
                     <input required name="firstName" ng-model="vm.firstName">
-                    <div ng-messages="projectForm.firstName.$error">
+                    <div ng-messages="signupForm.firstName.$error">
                         <div ng-message="required">This is required.</div>
                     </div>
                 </md-input-container>
                 <md-input-container class="md-block">
                     <label>Last Name</label>
                     <input required name="lastName" ng-model="vm.lastName">
-                    <div ng-messages="projectForm.lastName.$error">
+                    <div ng-messages="signupForm.lastName.$error">
                         <div ng-message="required">This is required.</div>
                     </div>
                 </md-input-container>
                 <md-input-container class="md-block">
                     <label>Username</label>
                     <input type="email" required name="username" ng-model="vm.username">
-                    <div ng-messages="projectForm.username.$error">
+                    <div ng-messages="signupForm.username.$error">
                         <div ng-message="required">This is required.</div>
                         <div ng-message="email">Invalid email address.</div>
                     </div>
@@ -39,7 +39,7 @@
                 <md-input-container class="md-block">
                     <label>Password</label>
                     <input required name="password" ng-model="vm.password">
-                    <div ng-messages="projectForm.password.$error">
+                    <div ng-messages="signupForm.password.$error">
                         <div ng-message="required">This is required.</div>
                     </div>
                 </md-input-container>

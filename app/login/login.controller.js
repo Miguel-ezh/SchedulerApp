@@ -6,5 +6,7 @@ LoginController.$inject = [];
 
 function LoginController() {
     let vm = this;
+    vm.username = '';
+    vm.password = '';
     
 }

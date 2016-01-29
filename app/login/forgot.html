@@ -4,22 +4,26 @@
 <div flex layout="row" layout-fill layout-align="center center">
     <md-whiteframe class="md-whiteframe-5dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
         <md-content id="login-form" flex layout="column" layout-padding >
-            <div class="logo md-accent-bg">
+            <md-button class="md-icon-button md-primary" ng-click="vm.back()">
+                <md-icon aria-label="Back" class="material-icons">arrow_back</md-icon>
+            </md-button>
+            <div class="logo-forgot md-accent-bg">
                 <span>S</span>
             </div>
             <h3 class="md-subhead" style="text-align: center;">
                 Log in to your account.
             </h3>
-            <form name="projectForm" novalidate>
+            <form name="forgotForm" novalidate>
                 <md-input-container class="md-block">
                     <label>Email</label>
-                    <input name="username" ng-model="vm.username">
-                    <!--<div ng-messages="vm.username.$error">
+                    <input required name="email" ng-model="vm.email">
+                    <div ng-messages="forgotForm.username.$error">
                         <div ng-message="required">This is required.</div>
-                    </div>-->
+                        <div ng-message="email">Invalid email address.</div>
+                    </div>
                 </md-input-container>
                 <div layout="row" layout-align="center center">
-                    <md-button class="md-raised md-primary md-buttom-large" aria-label="LOG IN">
+                    <md-button type="submit" class="md-raised md-primary md-buttom-large" aria-label="LOG IN">
                         RECOVER PASSWORD
                     </md-button>
                 </div>
