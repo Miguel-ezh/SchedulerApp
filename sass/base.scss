@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.md-fab-big md-icon {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+.md-buttom-large {
+    width: 200px;
+}
+
+@import 'page-animations';
+@import 'page-login';
