@@ -13,6 +13,15 @@ a {
 .md-buttom-large {
   width: 200px; }
 
+.md-toast-error .md-toast-content {
+  background-color: #B71C1C !important; }
+
+.md-toast-success .md-toast-content {
+  background-color: #388E3C !important; }
+
+.md-toast-info .md-toast-content {
+  background-color: #2196F3 !important; }
+
 /* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
 .well[ui-view] {

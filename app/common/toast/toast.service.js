@@ -15,7 +15,7 @@ function toastService($mdToast){
     
     function error(msg){
         $mdToast.show({
-            template: '<md-toast class="md-toast md-red-800-bg">' + msg + '</md-toast>',
+            template: '<md-toast class="md-toast md-toast-error">' + msg + '</md-toast>',
             hideDelay: 6000,
             position: 'bottom right'
         });
@@ -23,7 +23,7 @@ function toastService($mdToast){
     
     function success(msg){
         $mdToast.show({
-            template: '<md-toast class="md-toast md-red-800-bg">' + msg + '</md-toast>',
+            template: '<md-toast class="md-toast md-toast-success">' + msg + '</md-toast>',
             hideDelay: 6000,
             position: 'bottom right'
         });
@@ -31,7 +31,7 @@ function toastService($mdToast){
     
     function info(msg){
         $mdToast.show({
-            template: '<md-toast class="md-toast md-red-800-bg">' + msg + '</md-toast>',
+            template: '<md-toast class="md-toast md-toast-info">' + msg + '</md-toast>',
             hideDelay: 6000,
             position: 'bottom right'
         });

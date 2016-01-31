@@ -10,6 +10,6 @@ function LoginController(toastService) {
     vm.password = '';
     
     vm.test = function(){
-        toastService.info('test alert');
+        
     }
 }
