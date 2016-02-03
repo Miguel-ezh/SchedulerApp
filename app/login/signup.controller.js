@@ -14,4 +14,8 @@ function SignupController($window) {
     vm.back = function(){
         $window.history.back();
     }
+    
+    vm.signup = function(){
+        
+    }
 }

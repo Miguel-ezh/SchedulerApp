@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var validator = require('express-validator');
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/s-app');
@@ -25,15 +26,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/app', express.static(path.join(__dirname, 'app')));
 app.use('/jspm_packages', express.static(path.join(__dirname, 'jspm_packages')));
 app.use('/public/config.js', express.static(path.join(__dirname, 'config.js')));
+app.use(validator());
 
 
 var routes = require('./routes/index');
 var loginroute = require('./routes/login');
 var usersroute = require('./routes/users');
+var signuproute = require('./routes/signup');
 
 app.use('/', routes);
 app.use('/api/v1/login', loginroute);
 app.use('/api/v1/user', usersroute);
+app.use('/api/v1/signup', signuproute);
 
 
 // catch 404 and forward to error handler
