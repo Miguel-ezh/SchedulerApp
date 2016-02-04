@@ -21,10 +21,15 @@
   },
   "devDependencies": {
     "bcrypt": "^0.8.5",
+    "chai": "^3.5.0",
     "gulp": "^3.9.0",
     "gulp-express": "^0.3.5",
+    "gulp-mocha": "^2.2.0",
     "gulp-sass": "^2.1.1",
-    "jspm": "^0.16.24"
+    "gulp-util": "^3.0.7",
+    "jspm": "^0.16.24",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3"
   },
   "jspm": {
     "dependencies": {

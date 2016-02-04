@@ -1,6 +1,8 @@
-var gulp = require('gulp');
-var server = require('gulp-express');
-var sass = require('gulp-sass');
+var gulp = require('gulp'),
+    server = require('gulp-express'),
+    sass = require('gulp-sass'),
+    mocha = require('gulp-mocha'),
+    gutil = require('gulp-util');
 
 gulp.task('run-server', function () {
     // Start the server at the beginning of the task 
@@ -28,6 +30,19 @@ gulp.task('app:watch', function(){
 
 gulp.task('sass:watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
+});
+
+gulp.task('mocha', function(){
+    return gulp.src(['test/**/*.js'], { read: false })
+        .pipe(mocha({ reporter: 'list' }))
+        .on('error', gutil.log);
+});
+
+gulp.task('test', function(){
+    gulp.run('mocha');
+    gulp.watch(['routes/**/*.js', 
+        'models/**/*.js',
+        'test/**/*.js'], ['mocha']);  
 });
 
 gulp.task('serve', ['run-server','app:watch', 'sass:watch']);
