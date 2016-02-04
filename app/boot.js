@@ -1,4 +1,5 @@
 import 'angular-material/angular-material.css!'
+import 'animate.css/animate.css!'
 
 import angular from 'angular'
 import material from 'angular-material'
@@ -6,9 +7,9 @@ import 'angular-ui-router'
 import 'angular-messages'
 
 // Load loggers for injection and pre-angular debugging
-import { LogDecorator, ExternalLogger } from 'app/utils/logDecorator';
-import 'angular-storage';
-import 'angular-jwt';
+import { LogDecorator, ExternalLogger } from 'app/utils/logDecorator'
+import 'angular-storage'
+import 'angular-jwt'
 
 //Load modules
 import '/app/common/load'

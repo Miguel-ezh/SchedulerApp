@@ -20,6 +20,7 @@ System.config({
     "angular-messages": "github:angular/bower-angular-messages@1.4.9",
     "angular-storage": "npm:angular-storage@0.0.13",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
+    "animate.css": "npm:animate.css@3.5.1",
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "core-js": "npm:core-js@1.2.6",

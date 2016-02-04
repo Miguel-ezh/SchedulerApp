@@ -1,5 +1,4 @@
 var express = require('express');
-var auth = require('../test/auth');
 var router = express.Router();
 
 /* GET home page. */
