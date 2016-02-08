@@ -15,12 +15,14 @@ router.post('/', function(req, res, next) {
     }
     else{
         
-        var result = auth.createUser({
-            username: req.body.username,
-            password: req.body.password,
-            firstname: req.body.firstname,
-            lastname: req.body.lastname
-        });
+        
+        
+        // var result = auth.createUser({
+        //     username: req.body.username,
+        //     password: req.body.password,
+        //     firstname: req.body.firstname,
+        //     lastname: req.body.lastname
+        // });
         res.sendStatus(200);
     }
     
