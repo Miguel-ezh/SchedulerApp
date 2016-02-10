@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var user = require('../classes/user');
 
 /* GET home page. */
-router.post('/', function(req, res, next) {
+router.post('/', function (req, res, next) {
     req.assert('username', 'Username required').notEmpty();
     req.assert('username', 'Invalid email address.').isEmail();
     req.assert('password', 'Password required.').notEmpty();
@@ -14,16 +15,22 @@ router.post('/', function(req, res, next) {
         res.status(400).send({ message: 'Invalid parameters.', errors: errors });
     }
     else{
+        var newUser = {
+            username: req.body.username,
+            password: req.body.password,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname
+        };
         
-        
-        
-        // var result = auth.createUser({
-        //     username: req.body.username,
-        //     password: req.body.password,
-        //     firstname: req.body.firstname,
-        //     lastname: req.body.lastname
-        // });
-        res.sendStatus(200);
+        user
+            .save(newUser)
+            .then(
+                function(){
+                    res.sendStatus(200); 
+                },
+                function(err){
+                    res.status(500).send({ 'message': err });
+                });
     }
     
 });

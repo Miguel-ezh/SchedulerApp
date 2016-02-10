@@ -9,4 +9,22 @@ var UserSchema = new mongoose.Schema({
 
 var User = mongoose.model('users', UserSchema);
 
-module.exports = User;
+module.exports.findByUsername = function (username){
+    var promise = new Promise((resolve, reject) => {
+        User.findOne({ 'username': username }, function(err, u){
+           if(err) reject(err);
+           
+           resolve(u);
+        });
+    });
+    
+    return promise;
+};
+
+module.exports.save = function save(user){
+    
+};
+
+module.exports.validateUser = function validateUser(username, pass){
+    
+};
