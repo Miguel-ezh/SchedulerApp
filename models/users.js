@@ -22,7 +22,12 @@ module.exports.findByUsername = function (username){
 };
 
 module.exports.save = function save(user){
+  var promise = new Promise((resolve, reject) => {
+        console.log('pase por aca');
+        resolve({});
+    });
     
+    return promise;  
 };
 
 module.exports.validateUser = function validateUser(username, pass){

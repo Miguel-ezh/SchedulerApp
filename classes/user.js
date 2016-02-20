@@ -19,6 +19,8 @@ class User {
                 .then(
                     function(user){
                         //the user already exist in the database, reject the promise.
+                        if(user === null) resolve(user);
+                        
                         reject('The username is already in use.');
                     },
                     function(err){
@@ -33,8 +35,8 @@ class User {
         return new Promise((resolve, reject) => {
            var source = Rx.Observable
                 .just(user)
-                .flatMap(this.validNewUserName.bind(this));
-                //.flatMap(this.setUserModel.save(user));
+                .flatMap(this.validNewUserName.bind(this))
+                .flatMap(this.userModel.save(user));
                 
            source.subscribe(
                function(result){
